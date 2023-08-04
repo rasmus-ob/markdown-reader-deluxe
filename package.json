@@ -1,0 +1,41 @@
+{
+  "name": "markdown-reader-deluxe",
+  "version": "1.0.0",
+  "description": "a great markdown-reader, to you know... read markdown.",
+  "main": "./bin/index.js",
+  "bin": {
+    "markdown-reader-deluxe": "./bin/index.js"
+  },
+  "scripts": {
+    "build": "npx tsc",
+    "start": "node bin/index.js -p 8080",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q bin/index.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/rasmus-ob/markdown-reader-deluxe.git"
+  },
+  "keywords": [
+    "markdown"
+  ],
+  "author": "Rasmus Olofsson Burman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rasmus-ob/markdown-reader-deluxe/issues"
+  },
+  "homepage": "https://github.com/rasmus-ob/markdown-reader-deluxe#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^20.4.7",
+    "@types/showdown": "^2.0.1",
+    "concurrently": "^8.2.0",
+    "nodemon": "^3.0.1",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "commander": "^11.0.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "showdown": "^2.1.0"
+  }
+}
