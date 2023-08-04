@@ -9,4 +9,5 @@ a great markdown-reader, to you know... read markdown.
 - Go into the directory you have your markdown files in.
 - run `markdown-reader-deluxe`
     - ***(OBS)*** you can specify what port you want to use with the -p or --port flag
-- then check the url provided by the tool 
+- then check the url provided by the tool
+- enjoy
