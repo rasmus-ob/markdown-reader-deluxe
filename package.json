@@ -16,7 +16,10 @@
     "url": "git+ssh://git@github.com/rasmus-ob/markdown-reader-deluxe.git"
   },
   "keywords": [
-    "markdown"
+    "markdown",
+    "markdown-reader",
+    "cli",
+    "npmtool"
   ],
   "author": "Rasmus Olofsson Burman",
   "license": "ISC",
