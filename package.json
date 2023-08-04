@@ -1,6 +1,6 @@
 {
   "name": "markdown-reader-deluxe",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a great markdown-reader, to you know... read markdown.",
   "main": "./bin/index.js",
   "bin": {
