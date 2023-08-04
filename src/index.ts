@@ -1,10 +1,8 @@
 #! /usr/bin/env node
-import * as dotenv from 'dotenv';
 import express, { Application, Request, Response } from 'express';
 import fs from 'fs';
 import showdown from 'showdown';
 import { Command } from 'commander';
-dotenv.config()
 
 const program = new Command()
 
