@@ -13,7 +13,10 @@ program.version('1.0.0').description('a great markdown-reader, to you know... re
 const options = program.opts();
 const app = (0, express_1.default)();
 const PORT = parseInt(options.port) || 8080;
-const css = `<style>@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); * {font-family: 'Roboto', sans-serif}</style>`;
+const htmlHead = `<title>markdown files</title><link rel="stylesheet"
+      type="text/css"
+      href="https://cdn.rawgit.com/FabrizioMusacchio/GitHub_Flavor_Markdown_CSS/master/GitHub%20Flavor.css"
+/>`;
 const markdownFiles = fs_1.default.readdirSync('./').filter(file => file.endsWith('.md'));
 if (markdownFiles.length === 0) {
     console.log(`Couldn't find any markdown files`);
@@ -23,7 +26,7 @@ const markdownConverter = new showdown_1.default.Converter();
 app.get('/', (req, res) => {
     const header = '<h1>Available Files:</h1>';
     const list = `<ul>${markdownFiles.map(file => `<li><a href="./${file}">${file}</a></li>`)}</ul>`;
-    const html = css + header + list;
+    const html = htmlHead + header + list;
     res.send(html);
 });
 app.get('/:file', (req, res) => {
@@ -33,7 +36,7 @@ app.get('/:file', (req, res) => {
         return;
     }
     const markdown = fs_1.default.readFileSync(file).toString();
-    const html = css + markdownConverter.makeHtml(markdown);
+    const html = htmlHead + markdownConverter.makeHtml(markdown);
     res.send(html);
 });
 app.listen(PORT, () => console.log(`See your markdowns at http://localhost:${PORT} 🤓`));
