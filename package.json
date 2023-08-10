@@ -1,6 +1,6 @@
 {
   "name": "markdown-reader-deluxe",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "a great markdown-reader, to you know... read markdown.",
   "main": "./bin/index.js",
   "bin": {
@@ -19,7 +19,15 @@
     "markdown",
     "markdown-reader",
     "cli",
-    "npmtool"
+    "npmtool",
+    "md",
+    "dev-tools",
+    "md-reader",
+    "tool",
+    "development",
+    "easy-to-use",
+    "easy",
+    "great"
   ],
   "author": "Rasmus Olofsson Burman",
   "license": "ISC",
